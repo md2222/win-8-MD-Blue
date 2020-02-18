@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=win-8 MD Blue
+Comment=Windows 8 theme for Linux
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=win-8 MD Blue
+MetacityTheme=win-8 MD Blue
+#IconTheme=Windows 8
+CursorTheme=DMZ-White
+ButtonLayout=menu:minimize,maximize,close
