@@ -6,6 +6,8 @@ Modified for my taste.
 
 Project in development. This is Beta version.
 
+Taskbar modified for Cinnamon only. This is modified Linux Mint desktop.
+
 ### Manual installation
 
 Extract the zip file to the themes directory i.e. '/home/USERNAME/.themes'
