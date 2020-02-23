@@ -21,7 +21,7 @@
     -GtkPaned-handle-size: 4;
     -GtkProgressBar-min-horizontal-bar-height: 18;
     -GtkProgressBar-min-vertical-bar-width: 18;
-    -GtkRange-slider-width: 14;
+    -GtkRange-slider-width: 13;  
     -GtkRange-stepper-spacing: 0;
     -GtkRange-trough-border: 0;
     -GtkRange-trough-under-steppers: 1;
@@ -1490,7 +1490,7 @@ GtkLevelBar.vertical {
 }
 
 .scale {
-    -GtkRange-slider-width: 19;
+    -GtkRange-slider-width: 11;
     -GtkScale-slider-length: 11;
     -GtkRange-trough-border: 0;
 
@@ -1575,7 +1575,7 @@ GtkLevelBar.vertical {
  * scale *
  *********/
 .scale {
-    -GtkRange-slider-width: 19;
+    -GtkRange-slider-width: 11;
     -GtkScale-slider-length: 11;
     -GtkRange-trough-border: 0;
 

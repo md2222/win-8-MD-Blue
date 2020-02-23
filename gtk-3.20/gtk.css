@@ -86,11 +86,14 @@ scale:backdrop slider, switch:backdrop slider {
   transition: 200ms ease-out; }
 
 scrollbar {
-  transition: all 300ms cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+  transition: all 300ms cubic-bezier(0.25, 0.46, 0.45, 0.94); 
+}
   scrollbar:backdrop {
-    transition: 200ms ease-out; }
+    transition: 200ms ease-out; 
+  }
   scrollbar slider {
-    transition: 200ms ease-out; }
+    transition: 200ms ease-out; 
+  }
 
 decoration {
   transition: 200ms ease-out; }
@@ -963,7 +966,7 @@ notebook {
     background-image: linear-gradient(to right, #F0F0F0, shade(#F0F0F0, 0.95)); 
     background-color: shade(#F0F0F0, 0.95);
 	*/
-    background-image: linear-gradient(to right, #F0F0F0, shade(#F0F0F0, 0.95)); 
+    background-color: #e5e5e5;
     }
     notebook tab:hover {
       border-color: shade(#caeaff, 0.7);
@@ -1261,7 +1264,7 @@ scale {
     margin-left: 8px;
     margin-right: -13px; }
   scale slider {
-    min-height: 19px;
+    min-height: 11px;
     min-width: 11px;
     margin: -5px;
     margin-bottom: -10px;
@@ -1294,7 +1297,7 @@ scale {
       background-image: url("assets/slider-horiz-top-insensitive.png"); }
   scale.vertical slider {
     min-height: 11px;
-    min-width: 19px;
+    min-width: 11px;
     margin: -5px;
     margin-right: -10px;
     background-image: url("assets/slider-vert.png"); }
@@ -1333,35 +1336,46 @@ scale {
       margin-left: 6px;
       margin-right: -12px; }
 
+/*
+check  /home/USER/.config/gtk-3.0/gtk.css
+*/
+
 scrollbar {
   border: none;
-  background-color: mix(#F0F0F0, #000000, 0.1); }
+  background-color: mix(#F0F0F0, #000000, 0.1); 
+  }
   scrollbar trough {
     border: none;
-    border-radius: 0; }
+    border-radius: 0; 
+  }
   scrollbar:backdrop {
-    background-color: mix(#F0F0F0, #000000, 0.1); }
+    background-color: mix(#F0F0F0, #000000, 0.1); 
+  }
   scrollbar button:hover {
     border-color: mix(#F0F0F0, #000000, 0.1);
     background-image: none;
-    background-color: mix(#F0F0F0, #000000, 0.2); }
+    background-color: mix(#F0F0F0, #000000, 0.2); 
+  }
   scrollbar button:active {
     background-image: none;
     border-color: mix(#F0F0F0, #000000, 0.1);
-    background-color: mix(#F0F0F0, #000000, 0.6); }
+    background-color: mix(#F0F0F0, #000000, 0.6); 
+  }
   scrollbar button, scrollbar button:backdrop, scrollbar button:disabled, scrollbar button:disabled:backdrop {
-    padding: 3px;
+    padding: 3px;	/* #MD arrow in button - extend button*/
     border-color: mix(#F0F0F0, #000000, 0.1);
     background-image: none;
-    background-color: mix(#F0F0F0, #000000, 0.1); }
+    background-color: mix(#F0F0F0, #000000, 0.1); 
+  }
   scrollbar slider {
-    min-width: 45px;
-    min-height: 14px;
+    min-width: 13px;
+    min-height: 40px;
     margin: 0;
     border: none;
     border-radius: 0px;
     background-clip: padding-box;
-    background-color: mix(#F0F0F0, #000000, 0.4); }
+    background-color: mix(#F0F0F0, #000000, 0.4); 
+  }
     scrollbar slider:hover {
       background-color: mix(#F0F0F0, #000000, 0.35); }
       scrollbar slider:hover:active {
@@ -1369,10 +1383,11 @@ scrollbar {
     scrollbar slider:backdrop {
       background-color: mix(#F0F0F0, #000000, 0.45); }
     scrollbar slider:disabled {
-      background-color: transparent; }
+      background-color: transparent; 
+  }
   scrollbar.vertical slider {
-    min-width: 14px;
-    min-height: 45px; }
+    min-width: 13px;
+    min-height: 32px; }
   scrollbar.overlay-indicator:not(.dragging):not(.hovering) {
     border: none;
     opacity: 0.7;
@@ -1383,7 +1398,7 @@ scrollbar {
       min-width: 2px;
       min-height: 2px;
       background-color: mix(#F0F0F0, #000000, 0.6);
-      border: 2px solid transparent;
+      border: 1px solid transparent;
       border-radius: 2px; }
     scrollbar.overlay-indicator:not(.dragging):not(.hovering).horizontal slider {
       margin: 0;
@@ -1400,12 +1415,16 @@ scrollbar {
       color: transparent;
       background-color: transparent; }
   scrollbar.overlay-indicator.dragging, scrollbar.overlay-indicator.hovering {
-    opacity: 1; }
+    opacity: 1; 
+  }
   scrollbar.horizontal slider {
-    min-width: 40px; }
+    min-width: 32px; 
+    min-height: 13px;
+  }
   scrollbar.horizontal button {
-    min-height: 6px;
-    min-width: 6px; }
+    min-height: 6px;  /*  scrollbar button padding + this = button height */
+    min-width: 6px; 
+  }
     scrollbar.horizontal button.down {
       -gtk-icon-source: url("assets/arrow-right.svg"); }
       scrollbar.horizontal button.down:active {
@@ -1415,10 +1434,13 @@ scrollbar {
       scrollbar.horizontal button.up:active {
         -gtk-icon-source: url("assets/arrow-left-active.svg"); }
   scrollbar.vertical slider {
-    min-height: 40px; }
+    min-width: 13px;
+    min-height: 32px; 
+  }
   scrollbar.vertical button {
     min-height: 6px;
-    min-width: 6px; }
+    min-width: 6px; 
+	}
     scrollbar.vertical button.down {
       -gtk-icon-source: url("assets/arrow-down.svg"); }
       scrollbar.vertical button.down:active {
@@ -2216,23 +2238,31 @@ treeview {
       background-color: #caeaff; }
 
 filechooser.csd.background, filechooser placessidebar list, .nautilus-window.csd.background, .nautilus-window placessidebar list, .nemo-window.csd.background, .nemo-window placessidebar list {
-  background-color: #FFFFFF; }
+  background-color: #FFFFFF; 
+}
 filechooser .sidebar, .nautilus-window .sidebar, .nemo-window .sidebar {
-  background-color: #F0F0F0; }
+  background-color: #F0F0F0; 
+}
   filechooser .sidebar .view:not(:selected), filechooser .sidebar iconview, .nautilus-window .sidebar .view:not(:selected), .nautilus-window .sidebar iconview, .nemo-window .sidebar .view:not(:selected), .nemo-window .sidebar iconview {
     border: none;
     color: #000000;
-    background-color: transparent; }
+    background-color: transparent; 
+  }
   filechooser .sidebar frame > border, filechooser .sidebar .frame, .nautilus-window .sidebar frame > border, .nautilus-window .sidebar .frame, .nemo-window .sidebar frame > border, .nemo-window .sidebar .frame {
-    border: none; }
+    border: none; 
+  }
   filechooser .sidebar row:not(:selected), filechooser .sidebar view row:not(:selected), filechooser .sidebar row.sidebar-row:not(:selected), .nautilus-window .sidebar row:not(:selected), .nautilus-window .sidebar view row:not(:selected), .nautilus-window .sidebar row.sidebar-row:not(:selected), .nemo-window .sidebar row:not(:selected), .nemo-window .sidebar view row:not(:selected), .nemo-window .sidebar row.sidebar-row:not(:selected) {
-    color: #000000; }
+    color: #000000; 
+  }
   filechooser .sidebar .expander, .nautilus-window .sidebar .expander, .nemo-window .sidebar .expander {
-    color: #000000; }
+    color: #000000; 
+  }
     filechooser .sidebar .expander:hover, .nautilus-window .sidebar .expander:hover, .nemo-window .sidebar .expander:hover {
-      color: #caeaff; }
+      color: #caeaff; 
+    }
 .nemo-window .nemo-inactive-pane .view, .nemo-window .nemo-inactive-pane iconview {
-    background-color: #f8f8f8; }
+    background-color: #f8f8f8; 
+}
 
 .caja-navigation-window .caja-side-pane {
   background-color: #FFFFFF; }
@@ -2446,7 +2476,7 @@ searchbar {
   background-color: transparent; }
 .osd scrollbar slider, scrollbar.osd slider {
   border-width: 0px;
-  border-radius: 6px;
+  border-radius: 0px;
   background-color: mix(#F0F0F0, #000000, 0.21); }
   .osd scrollbar slider:hover, scrollbar.osd slider:hover {
     border-color: mix(#F0F0F0, #000000, 0.31);
@@ -2578,8 +2608,6 @@ Window header with buttons
     background-repeat: no-repeat; 
   }
   .titlebar .titlebutton.close {
-    min-height: 20px;
-    min-width: 26px;
     background: url("assets/close-normal.png") center center; }
     .titlebar .titlebutton.close:hover {
       background: url("assets/close-hover.png") center center; }
@@ -2916,10 +2944,12 @@ panel-toplevel.background na-tray-applet {
   border-radius: 3px;
   border-color: #caeaff;
   color: #000000;
-  background-color: #FFFFFF; }
+  background-color: #FFFFFF; 
+}
   .nemo-window .nemo-window-pane widget.entry:selected, .nemo-window .nemo-window-pane widget.entry:selected:focus {
     color: #000000;
-    background-color: #caeaff; }
+    background-color: #caeaff; 
+  }
 
 UnityDecoration {
   -UnityDecoration-extents: 28px 0 0 0;
@@ -3037,5 +3067,5 @@ window#GeanyMainWindow notebook tab { padding: 3px 6px; }
 /*
 not work
 */
-XedWindow .notebook tab.top { padding: 0 6px; }
+XedWindow .notebook tab.top { padding: 0px 6px; }
 

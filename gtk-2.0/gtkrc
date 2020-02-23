@@ -36,7 +36,7 @@ style "default"
     GtkEntry::state-hint            = 1
 
 	GtkRange::trough-border		= 0
-	GtkRange::slider-width		= 14
+	GtkRange::slider-width		= 11
 	GtkRange::stepper-size		= 5
 	GtkRange::stepper-spacing   = 0
 	GtkRange::arrow-scaling     = 0.25
@@ -46,7 +46,8 @@ style "default"
 	GtkScrollbar::has-backward-stepper		    = 1  
 	GtkScrollbar::has-forward-stepper		    = 1
 	GtkScrollbar::stepper-size	                = 14
-    GtkScrollbar::min-slider-length             = 42
+    GtkScrollbar::min-slider-length             = 32
+  GtkScrollbar::slider-width = 15
 	GtkScrolledWindow ::scrollbar-spacing		= 0
 	GtkScrolledWindow ::scrollbars-within-bevel	= 1
 
@@ -54,6 +55,9 @@ style "default"
 	GtkVScale::slider_width 	= 19
 	GtkHScale::slider_length 	= 11
 	GtkHScale::slider_width 	= 19
+
+    #GtkScale::slider_length = 11
+    #GtkScale::slider_width = 11
 
 	GtkStatusbar::shadow_type	= GTK_SHADOW_NONE
 	GtkSpinButton::shadow_type 	= GTK_SHADOW_NONE
@@ -594,7 +598,7 @@ style "default"
 
 style "toplevel_hack"
 {
-    engine "adwaita" {
+    engine "mist" {
     }
 }
 
@@ -604,6 +608,8 @@ style "ooo_stepper_hack"
 	GtkScrollbar::has-backward-stepper	= 1
 	GtkScrollbar::has-forward-stepper	= 1
 }
+
+# System settings has param "Override theme scrollbar...". Save it in ~/.gtkrc-2.0, 
 
 style "scrollbar"
 {
@@ -680,7 +686,7 @@ style "scrollbar"
       function			= SLIDER
       state           	= NORMAL
       file				= "Scrollbars/slider-vert.png" 
-      border			= { 5, 5, 7, 7 }
+      border			= { 7, 7, 7, 7 }
       stretch			= TRUE
       orientation		= VERTICAL
 
@@ -2074,7 +2080,7 @@ style "scrolled_window"
         xthickness      = 1
         ythickness      = 1
 
-        engine "pixmap"
+    engine "pixmap"
 	{
         image
         {
@@ -2083,7 +2089,7 @@ style "scrolled_window"
                 border			= { 5, 5, 5, 5 }
                 stretch			= TRUE
         }
-        }
+    }
 }
 
 style "frame"
@@ -2091,7 +2097,7 @@ style "frame"
         xthickness      = 1
         ythickness      = 1
 
-        engine "pixmap"
+    engine "pixmap"
 	{
         image
         {
