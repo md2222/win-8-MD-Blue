@@ -17,7 +17,8 @@ Extract the zip file to the themes directory i.e. '/home/USERNAME/.themes'
 Firefox get styles in \~/.config/gtk-3.0/gtk.css. 
 If you put "scrollbar slider" style here, cinnamon think "Override the current theme's scrollbar width" enebled,
 and set wrong value in \~/.gtkrc-2.0.<br>
-If you disable the parameter, cinnamon delete "scrollbar slider" style from gtk.css. Sad.
-
+If you disable the parameter, cinnamon delete "scrollbar slider" style from gtk.css. Sad.<br>
+...<br>
+You can override gtk theme used by Firefox: navigate to about:config create a string key widget.content.gtk-theme-override set the value to any light name, for example "win-8 MD Blue". Restart Firefox to apply.
 
 
