@@ -8,7 +8,8 @@
 @define-color fg_color #202020;
 @define-color base_color #fefefe;
 @define-color text_color #202020;
-@define-color selected_bg_color #b4e1ff;
+/* @define-color selected_bg_color #b4e1ff; */
+@define-color selected_bg_color #308cc6;
 @define-color selected_fg_color #fff;
 @define-color tooltip_bg_color #f0f0f0;
 @define-color tooltip_fg_color #000;
