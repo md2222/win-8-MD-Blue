@@ -2585,14 +2585,15 @@ headerbar.selection-mode, toolbar.selection-mode {
       color: shade(#c5e5fa, 0.7); }
 
 decoration {
+  border: 4px solid #6fafda;  /* #MD */
   border-radius: 0;
-  border: 4px solid #6fafda;
-  box-shadow: 0 3px 6px 1px alpha(#000000, 0.5), 0 0 0 1px alpha(#000000, 0.23);
+  box-shadow: 0 3px 5px 1px alpha(#000000, 0.5);
   margin: 10px; 
 }
   decoration:backdrop {
     border: 4px solid #c9c9c9;
-    box-shadow: 0 3px 4px 1px transparent, 0 2px 6px 2px alpha(#000000, 0.2), 0 0 0 1px alpha(#000000, 0.18); 
+    /*box-shadow: 0 3px 4px 1px transparent, 0 2px 6px 2px alpha(#000000, 0.2), 0 0 0 1px alpha(#000000, 0.18); */
+    box-shadow: 0 3px 5px 1px alpha(#000000, 0.2);
   }
   .maximized decoration, .fullscreen decoration, .tiled decoration, .tiled-top decoration, .tiled-right decoration, .tiled-bottom decoration, .tiled-left decoration {
     border-radius: 0; 
@@ -2604,7 +2605,7 @@ decoration {
   .csd.popup decoration {
     border-width: 0px;
     border-radius: 0px;
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(0, 0, 0, 0.1); 
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(0, 0, 0, 0.1); 
     }
   .ssd decoration {
     border-width: 0px;
