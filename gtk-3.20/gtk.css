@@ -1,6 +1,7 @@
 /*
 hover color - e2eff7  cfe7ff  caeaff  c5e5f5  c5e5fa
-red  ff5b5e  ff413b ? 
+red  ff5b5e  ff413b ? ff5b60
+error  e61b23  ed1c24
 */
 
 * {
@@ -10,7 +11,7 @@ red  ff5b5e  ff413b ?
   -GtkScrollbar-has-secondary-forward-stepper: false;
   -GtkScrolledwindow-scrollbar-spacing: 0;
   -GtkScrolledwindow-scrollbars-within-bevel: 0; /* border in Double comm scrollbar ? */
-  -GtkTextView-error-underline-color: #ff5b5e;
+  -GtkTextView-error-underline-color: #ed1c24;
   -GtkToolbutton-icon-spacing: 5;
   -GtkToolItemGroup-expander-size: 11;
   -GtkWidget-text-handle-width: 20;
@@ -670,23 +671,23 @@ infobar {
 .error {
   border-width: 1px;
   border-style: solid;
-  border-color: shade(#FF0000, 0.8);
-  background-color: #FF0000;
+  border-color: shade(#e61b23, 0.8);
+  background-color: #e61b23;
   background-image: none;
   color: #FFFFFF; }
   .error button {
-    border-color: shade(#FF0000, 0.8);
+    border-color: shade(#e61b23, 0.8);
     color: #FFFFFF;
     background-image: none;
-    background-color: shade(#FF0000, 1.08); }
+    background-color: shade(#e61b23, 1.08); }
     .error button:hover {
-      border-color: shade(#FF0000, 0.85);
-      background-color: shade(#FF0000, 1.1); }
+      border-color: shade(#e61b23, 0.85);
+      background-color: shade(#e61b23, 1.1); }
     .error button:active {
-      border-color: shade(#FF0000, 0.6);
-      background-color: shade(#FF0000, 0.95); }
+      border-color: shade(#e61b23, 0.6);
+      background-color: shade(#e61b23, 0.95); }
       .error button:active:hover {
-        border-color: shade(#FF0000, 0.85); }
+        border-color: shade(#e61b23, 0.85); }
     .error button.close {
       color: #FFFFFF; }
       .error button.close:hover {
@@ -797,6 +798,17 @@ printdialog paper {
   border: 1px solid shade(#F0F0F0, 0.9);
   background: white;
   padding: 0; }
+
+filechooser #pathbarbox {
+  background-color: #f0f0f0;
+  border-bottom: 1px solid #d0d0d0; 
+}
+filechooser .search-bar {
+  background-color: #f0f0f0; 
+}
+filechooser actionbar {
+  background-color: #f0f0f0; 
+}
 
 filechooserbutton:drop(active) {
   box-shadow: none;
@@ -2265,7 +2277,7 @@ treeview {
       background-color: #c5e5fa; }
 
 filechooser.csd.background, filechooser placessidebar list, .nautilus-window.csd.background, .nautilus-window placessidebar list, .nemo-window.csd.background, .nemo-window placessidebar list {
-  background-color: #FFFFFF; 
+  background-color: #F0F0F0; 
 }
 filechooser .sidebar, .nautilus-window .sidebar, .nemo-window .sidebar {
   background-color: #F0F0F0; 
@@ -2326,9 +2338,10 @@ stacksidebar row {
     background-size: 6px 6px, 0 0; }
 
 placessidebar > viewport.frame {
-  border-style: none; }
+  border-style: none; 
+}
 placessidebar row {
-  min-height: 36px;
+  min-height: 24px;
   padding: 0px; }
   placessidebar row > revealer {
     padding: 0 14px; }
@@ -2530,21 +2543,21 @@ searchbar {
 button.destructive-action {
   border-width: 1px;
   border-style: solid;
-  border-color: mix(#ff5b5e, #000000, 0.2);
+  border-color: mix(#ff5b60, #000000, 0.2);
   border-radius: 0px;
-  color: mix(#000000, #ff5b5e, 0.1);
-  background-color: #ff5b5e; 
+  color: mix(#000000, #ff5b60, 0.1);
+  background-color: #ff5b60; 
 }
   button.destructive-action:hover {
-    border-color: mix(#ff5b5e, #000000, 0.2);
-    background-color: mix(#ff5b5e, #000000, 0.05); }
+    border-color: mix(#ff5b60, #000000, 0.2);
+    background-color: mix(#ff5b60, #000000, 0.05); }
   button.destructive-action:active {
-    border-color: mix(#ff5b5e, #000000, 0.2);
-    background-color: mix(#ff5b5e, #000000, 0.1); }
+    border-color: mix(#ff5b60, #000000, 0.2);
+    background-color: mix(#ff5b60, #000000, 0.1); }
   button.destructive-action:backdrop {
-    border-color: mix(#ff5b5e, #000000, 0.1);
-    color: mix(#000000, #ff5b5e, 0.1);
-    background-color: mix(#ff5b5e, #F0F0F0, 0.3); }
+    border-color: mix(#ff5b60, #000000, 0.1);
+    color: mix(#000000, #ff5b60, 0.1);
+    background-color: mix(#ff5b60, #F0F0F0, 0.3); }
 
 toolbar.selection-mode {
   padding: 4px; }
@@ -2738,7 +2751,8 @@ messagedialog .background.csd {
   background-color: #F0F0F0; }
 messagedialog decoration {
   border-radius: 0px;
-  box-shadow: 0 1px 2px alpha(black, 0.2); }
+  box-shadow: 0 1px 2px alpha(black, 0.2); 
+}
 messagedialog .titlebar.horizontal {
   border: none;
   background-color: #F0F0F0; }
@@ -3101,7 +3115,7 @@ UnityPanelWidget, .unity-panel {
 @define-color unfocused_borders shade(#F0F0F0, 0.9);
 /* these are pretty self explicative */
 @define-color warning_color #FF9900;
-@define-color error_color #ff5b5e;
+@define-color error_color #ed1c24;
 @define-color success_color #06B025;
 /* these colors are exported for the window manager and shouldn't be used in applications,
 read if you used those and something break with a version upgrade you're on your own... */
