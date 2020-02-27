@@ -8,7 +8,7 @@ Project in development. This is Beta version.
 
 Taskbar modified for Cinnamon only. This is modified Linux Mint desktop.
 
-![win-8-MD-Blue](https://raw.githubusercontent.com/md2222/win-8-MD-Blue/master/win-8-MD-Blue-screenshot-01.png)
+![win-8-MD-Blue](https://raw.githubusercontent.com/md2222/win-8-MD-Blue/master/win-8-MD-Blue-example-01.png)
 
 ### Manual installation
 

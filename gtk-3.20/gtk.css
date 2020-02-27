@@ -485,7 +485,7 @@ entry {
     border-width: 0 0 2px;
     border-radius: 0;
     border-style: solid;
-    border-color: shade(#5cb85c, 0.6);
+    border-color: shade(#7bc043, 0.6);
     background-color: transparent; 
   }
   entry.flat, entry.flat:focus {
@@ -1157,9 +1157,9 @@ progressbar {
   progressbar progress {
     border: none;
     border-radius: 0px;
-    background-color: #5cb85c; }
+    background-color: #7bc043; }
     progressbar progress:backdrop {
-      background-color: #5cb85c; }
+      background-color: #7bc043; }
   progressbar trough {
     border: 1px solid shade(shade(#F0F0F0, 0.9), 0.85);
     border-radius: 0px;
@@ -1174,11 +1174,11 @@ progressbar {
 treeview.view.progressbar, treeview.view.progressbar:disabled {
   color: #202020;
   border-radius: 0;
-  background-color: #5cb85c; }
+  background-color: #7bc043; }
 treeview.view.progressbar:focus, treeview.view.progressbar:selected:focus, treeview.view.progressbar:focus:selected, treeview.view.progressbar:focus:selected:focus, treeview.view.progressbar:disabled:selected {
   border-radius: 0;
   color: #c5e5fa;
-  background-color: #5cb85c; }
+  background-color: #7bc043; }
 treeview.view.trough {
   color: #202020;
   background-color: alpha(black, 0.1);
@@ -1205,7 +1205,7 @@ levelbar block {
   border-radius: 0px;
   background-color: #c5e5fa; }
   levelbar block.high {
-    background-color: shade(#5cb85c, 0.9); }
+    background-color: shade(#7bc043, 0.9); }
   levelbar block.low {
     background-color: shade(#FF9900, 0.9); }
   levelbar block.empty {
@@ -2290,6 +2290,10 @@ filechooser .sidebar, .nautilus-window .sidebar, .nemo-window .sidebar {
 .nemo-window .nemo-inactive-pane .view, .nemo-window .nemo-inactive-pane iconview {
     background-color: #f8f8f8; 
 }
+.nemo-window .nemo-places-sidebar .places-treeview {
+  -NemoPlacesTreeView-disk-full-bg-color: shade(#F0F0F0, 0.85);
+  -NemoPlacesTreeView-disk-full-fg-color: #3db3fc;
+}
 
 
 .caja-navigation-window .caja-side-pane {
@@ -2498,7 +2502,7 @@ searchbar {
   .osd progressbar progress, progressbar.osd progress {
     border-style: none;
     border-radius: 0;
-    background-color: #5cb85c; }
+    background-color: #7bc043; }
 
 .osd scrollbar trough, scrollbar.osd trough {
   background-color: transparent; }
@@ -2581,33 +2585,43 @@ headerbar.selection-mode, toolbar.selection-mode {
       color: shade(#c5e5fa, 0.7); }
 
 decoration {
-  border-radius: 0px 0px 0 0;
-  border-width: 0px;
+  border-radius: 0;
+  /*border-width: 0px;*/
+  border: 4px solid #6fafda;
   box-shadow: 0 3px 9px 1px alpha(#000000, 0.3), 0 0 0 1px alpha(#000000, 0.23);
-  margin: 10px; }
+  margin: 10px; 
+}
   decoration:backdrop {
-    box-shadow: 0 3px 9px 1px transparent, 0 2px 6px 2px alpha(#000000, 0.2), 0 0 0 1px alpha(#000000, 0.18); }
+    border: 4px solid #c9c9c9;
+    box-shadow: 0 3px 9px 1px transparent, 0 2px 6px 2px alpha(#000000, 0.2), 0 0 0 1px alpha(#000000, 0.18); 
+  }
   .maximized decoration, .fullscreen decoration, .tiled decoration, .tiled-top decoration, .tiled-right decoration, .tiled-bottom decoration, .tiled-left decoration {
-    border-radius: 0; }
+    border-radius: 0; 
+}
   .popup decoration {
-    box-shadow: none; }
+    box-shadow: none; 
+  }
   .csd.popup decoration {
     border-radius: 0px;
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(0, 0, 0, 0.1); 
     }
   .ssd decoration {
     border-radius: 0px 0px 0 0;
-    box-shadow: 0 0 0 1px alpha(#000000, 0.1); }
+    box-shadow: 0 0 0 1px alpha(#000000, 0.1); 
+  }
     .ssd decoration.maximized {
-      border-radius: 0; }
+      border-radius: 0; 
+	}
   tooltip.csd decoration {
     border-radius: 0px;
-    box-shadow: none; }
+    box-shadow: none; 
+  }
   .solid-csd decoration {
     margin: 1px;
     border-radius: 0px;
     background-color: alpha(white, 0.95);
-    box-shadow: none; }
+    box-shadow: none; 
+  }
 
 /*
 Window header with buttons
@@ -2690,17 +2704,18 @@ Window header with buttons
 
 .titlebar, .titlebar:not(headerbar), headerbar.default-decoration, .csd headerbar.default-decoration, .default-decoration.titlebar:not(headerbar), .csd .default-decoration.titlebar:not(headerbar) {
   min-height: 30px;
+  padding: 2px 4px;
   color: #202020;
-  background-color: #6fafda;
-  border-bottom: 1px solid shade(#6fafda, 0.9); 
+  background-color: #f0f0f0;
+  border-bottom: 1px solid shade(#f0f0f0, 0.9); 
 }
   .titlebar headerbar, .titlebar:not(headerbar) headerbar, headerbar.default-decoration headerbar, .csd headerbar.default-decoration headerbar, .default-decoration.titlebar:not(headerbar) headerbar, .csd .default-decoration.titlebar:not(headerbar) headerbar {
     border-bottom: none; 
 }
   .titlebar:backdrop, .titlebar:not(headerbar):backdrop, headerbar.default-decoration:backdrop, .csd headerbar.default-decoration:backdrop, .default-decoration.titlebar:not(headerbar):backdrop, .csd .default-decoration.titlebar:not(headerbar):backdrop {
     color: #202020;
-    background-color: shade(#F0F0F0, 0.95);
-    border-bottom-color: shade(#F0F0F0, 0.85); 
+    /*background-color: shade(#F0F0F0, 0.85);
+    border-bottom-color: shade(#F0F0F0, 0.9); */
 }
 
 messagedialog .background.csd {
