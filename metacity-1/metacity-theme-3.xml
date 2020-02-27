@@ -2,11 +2,11 @@
 <metacity_theme>
 <info>
     <!-- based on Arc metacity theme -->
-	<name>Windows 8 MD</name>
-	<author>Elbullazul</author>
-	<copyright>b00merang Group</copyright>
-	<date>2019</date>
-	<description>Windows 8 theme</description>
+	<name>win-8 MD Blue</name>
+	<author>MD</author>
+	<copyright>see b00merang Group</copyright>
+	<date>2020</date>
+	<description>Theme inspired by Windows 8</description>
 </info>
 
 <!-- meaningfull constants -->
