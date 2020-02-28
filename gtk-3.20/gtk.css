@@ -233,12 +233,14 @@ button {
     border-color: shade(#F0F0F0, 0.9);
     color: #202020;
     background-color: #F0F0F0; }
+
   button.flat {
     border-color: transparent;
     border-radius: 0px;
     color: #202020;
     background-color: transparent;
-    background-image: none; }
+    background-image: none; 
+  }
     button.flat:hover {
       color: #202020;
       border-color: shade(#c5e5fa, 0.7);
@@ -978,7 +980,7 @@ notebook {
   notebook > stack:not(:only-child) {
     background-color: #FFFFFF; }
   notebook tab {
-    padding: 2px 6px;
+    padding: 3px 6px;
     border-width: 1px;
     border-style: solid;
     border-radius: 0;
@@ -1005,6 +1007,9 @@ notebook {
         background-color: #FFFFFF; }
     notebook tab:backdrop {
       background-color: #F0F0F0; }
+	notebook tab button {
+		padding: 0;
+	}
   notebook > header {
     padding-top: 2px;
     background-color: #F0F0F0; }
@@ -1012,9 +1017,10 @@ notebook {
       background-color: #F0F0F0; }
     notebook > header.top {
       box-shadow: 0 1px shade(#F0F0F0, 0.9); }
-      notebook > header.top > tabs > tab {
+     notebook > header.top > tabs > tab {
         border-bottom: none;
-        margin-top: 2px; }
+        margin-top: 2px; 
+	 }
         notebook > header.top > tabs > tab:checked {
           border-top-left-radius: 0px;
           border-top-right-radius: 0px;
@@ -1927,7 +1933,8 @@ toolbar {
   background-color: #F0F0F0; }
   .inline-toolbar:backdrop {
     border-color: shade(#F0F0F0, 0.9);
-    background-color: #F0F0F0; }
+    background-color: #F0F0F0; 
+   }
   .inline-toolbar toolbutton > button {
     padding: 3px;
     border-style: solid;
@@ -3076,6 +3083,7 @@ UnityPanelWidget, .unity-panel {
   animation: playbackmenuitem_spinner 1s infinite linear;
   color: #c5e5fa; }
 
+
 /* GTK NAMED COLORS - use responsibly! */
 /* widget text/foreground color */
 @define-color theme_fg_color #202020;
@@ -3135,10 +3143,6 @@ read if you used those and something break with a version upgrade you're on your
 @define-color content_view_bg #FFFFFF;
 /*
 test
-*/
 window#GeanyMainWindow notebook tab { padding: 3px 6px; }
-/*
-not work
 */
-XedWindow .notebook tab.top { padding: 0px 6px; }
 
