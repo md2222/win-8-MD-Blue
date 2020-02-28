@@ -31,9 +31,9 @@ style "default"
 
 	GtkButton::child-displacement-y	= 0
 	GtkButton::default-border	= { 0, 0, 0, 0 }
-	GtkButton::default-outside_border       = { 0, 0, 0, 0 }
+	GtkButton::default-outside_border = { 0, 0, 0, 0 }
 
-    GtkEntry::state-hint            = 1
+    GtkEntry::state-hint  = 1
 
 	GtkRange::trough-border		= 0
 	GtkRange::slider-width		= 14
@@ -107,6 +107,10 @@ style "default"
 	base[ACTIVE]		= shade (0.9, @selected_bg_color)
 
 	# For succinctness, all reasonable pixmap options remain here
+
+  # Draw frame around menu in a non-compositied environment
+  # This needs to go before pixmap because we need to override some stuff
+  engine "adwaita" {}
 
 	engine "pixmap"
 	{
@@ -1055,7 +1059,7 @@ style "menubar_item"
 style "button"
 {
   xthickness = 4
-  ythickness = 3
+  ythickness = 4
 
   engine "pixmap"
   {
@@ -1100,7 +1104,7 @@ style "button"
 style "button_nohilight"
 {
   xthickness	= 4
-  ythickness	= 3
+  ythickness	= 4
 
   engine "pixmap"
   {
@@ -1151,7 +1155,7 @@ style "checkbutton"
 style "entry"
 {
 	xthickness	= 3
-	ythickness   	= 4
+	ythickness   	= 3
 
     base[NORMAL] = @base_color
     base[INSENSITIVE] = @insensitive_bg_color
@@ -1221,8 +1225,8 @@ style "notebook_tab_label"
 
 style "combobox_entry"
 {
-	xthickness	= 3
-	ythickness   	= 4
+	xthickness	= 4
+	ythickness  = 4
 
 	engine "pixmap"
 	{
@@ -1401,7 +1405,7 @@ style "spinbutton"
   bg[NORMAL] = @bg_color
 
   xthickness	= 3
-  ythickness	= 4
+  ythickness	= 3
 
   engine "pixmap"
   {
@@ -1417,7 +1421,7 @@ style "spinbutton"
       state 			= NORMAL
       detail			= "spinbutton_up"
       file			= "Spin/up-background.png"
-      border			= { 1, 4, 5, 0 }
+      border			= { 1, 4, 4, 0 }
       stretch			= TRUE
       overlay_file		= "Arrows/arrow-up-small.png"
       overlay_stretch		= FALSE
@@ -1429,7 +1433,7 @@ style "spinbutton"
       state 			= PRELIGHT
       detail			= "spinbutton_up"
       file			= "Spin/up-background-prelight.png"
-      border			= { 1, 4, 5, 0 }
+      border			= { 1, 4, 4, 0 }
       stretch			= TRUE
       overlay_file		= "Arrows/arrow-up-small-prelight.png"
       overlay_stretch		= FALSE
@@ -1441,7 +1445,7 @@ style "spinbutton"
       state 			= INSENSITIVE
       detail			= "spinbutton_up"
       file			= "Spin/up-background-disable.png"
-      border			= { 1, 4, 5, 0 }
+      border			= { 1, 4, 4, 0 }
       stretch			= TRUE
       overlay_file		= "Arrows/arrow-up-small-insens.png"
       overlay_stretch		= FALSE
@@ -1453,7 +1457,7 @@ style "spinbutton"
       state 			= ACTIVE
       detail			= "spinbutton_up"
       file			= "Spin/up-background.png"
-      border			= { 1, 4, 5, 0 }
+      border			= { 1, 4, 4, 0 }
       stretch			= TRUE
       overlay_file		= "Arrows/arrow-up-small-prelight.png"
       overlay_stretch		= FALSE
@@ -1887,16 +1891,18 @@ style "combobox_separator"
   GtkWidget::wide-separators = 1
 }
 
+# +combobox height
 style "combobox"
-{
-  xthickness = 0
-  ythickness = 0
-}
-
-style "combobox_button"
 {
   xthickness = 2
   ythickness = 2
+}
+
+# padding of select line
+style "combobox_button"
+{
+  xthickness = 1
+  ythickness = 3
 }
 
 style "range"
@@ -2091,8 +2097,8 @@ style "scrolled_window"
 
 style "frame"
 {
-        xthickness      = 1
-        ythickness      = 1
+        xthickness = 1
+        ythickness = 1
 
     engine "pixmap"
 	{
