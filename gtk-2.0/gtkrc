@@ -898,7 +898,7 @@ style "menu_item"
         function        = OPTION
         state 			= NORMAL
         shadow          = OUT
-        overlay_file    = "Others/null.png"
+        overlay_file    = "assets/menu-radio-unchecked.png"
         overlay_stretch = FALSE
     }
 
@@ -907,7 +907,7 @@ style "menu_item"
         function        = OPTION
         state 			= PRELIGHT
         shadow          = OUT
-        overlay_file    = "Others/null.png"
+        overlay_file    = "assets/menu-radio-unchecked.png"
         overlay_stretch = FALSE
     }
 
@@ -916,7 +916,7 @@ style "menu_item"
         function        = OPTION
         state 			= ACTIVE
         shadow          = OUT
-        overlay_file    = "Others/null.png"
+        overlay_file    = "assets/menu-radio-unchecked.png"
         overlay_stretch = FALSE
     }
 
@@ -925,7 +925,7 @@ style "menu_item"
         function        = OPTION
         state 			= INSENSITIVE
         shadow         	= OUT
-        overlay_file    = "Others/null.png"
+        overlay_file    = "assets/menu-radio-unchecked-insensitive.png"
         overlay_stretch = FALSE
     }
 
@@ -934,7 +934,7 @@ style "menu_item"
         function        = OPTION
         state 			= NORMAL
         shadow          = IN
-        overlay_file    = "Check-Radio/menuoption.png"
+        overlay_file    = "assets/menu-radio-checked.png"
         overlay_stretch = FALSE
     }
 
@@ -943,7 +943,7 @@ style "menu_item"
         function        = OPTION
         state			= PRELIGHT
         shadow          = IN
-        overlay_file    = "Check-Radio/menuoption_prelight.png"
+        overlay_file    = "assets/menu-radio-checked.png"
         overlay_stretch = FALSE
     }
 
@@ -952,7 +952,7 @@ style "menu_item"
         function        = OPTION
         state			= ACTIVE
         shadow          = IN
-        overlay_file    = "Check-Radio/menuoption.png"
+        overlay_file    = "assets/menu-radio-checked.png"
         overlay_stretch	= FALSE
     }
 
@@ -961,7 +961,7 @@ style "menu_item"
         function        = OPTION
         state 			= INSENSITIVE
         shadow          = IN
-        overlay_file    = "Others/null.png"
+        overlay_file    = "assets/menu-radio-checked-insensitive.png"
         overlay_stretch = FALSE
     }
 
