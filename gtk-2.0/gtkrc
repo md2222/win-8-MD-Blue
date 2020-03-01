@@ -3,7 +3,7 @@
 # date: 20.02.2020
 # description: Windows 8 gtk theme 
 
-gtk-color-scheme	= "base_color:#fefefe\nfg_color:#202020\ntooltip_fg_color:#202020\nselected_bg_color:#5198d1\nselected_fg_color:#FFFFFF\ntext_color:#313739\nbg_color:#F0F0F0\ninsensitive_bg_color:#F4F4F2\ntooltip_bg_color:#FFFFE0"
+gtk-color-scheme	= "base_color:#fefefe\nfg_color:#202020\ntooltip_fg_color:#202020\nselected_bg_color:#5198d1\nselected_fg_color:#ffffff\ntext_color:#313739\nbg_color:#F0F0F0\ninsensitive_bg_color:#F4F4F2\ntooltip_bg_color:#FFFFE0"
 
 gtk-auto-mnemonics              = 1
 gtk-primary-button-warps-slider = 1
@@ -82,29 +82,30 @@ style "default"
 
 	# Colors
 
-	bg[NORMAL]		= @bg_color
-	bg[PRELIGHT]		= shade (1.02, @bg_color)
-	bg[SELECTED]		= @selected_bg_color
-	bg[INSENSITIVE] 	= @bg_color
-	bg[ACTIVE]		= shade (0.9, @bg_color)
+	bg[NORMAL]		= @bg_color		# Normal Background, inactive Metacity bar, buttons
+	bg[PRELIGHT]		= shade (1.02, @bg_color)		# Mouseover buttons
+	bg[ACTIVE]		= shade (0.9, @bg_color)		# Mouseclicking, Tabs, active window list
+	bg[SELECTED]		= @selected_bg_color		# Metacity Bar
+	bg[INSENSITIVE] 	= @bg_color		# Insensitive buttons
 
-	fg[NORMAL]		= @text_color
-	fg[PRELIGHT]		= @fg_color
-	fg[SELECTED]		= @selected_fg_color
-	fg[INSENSITIVE]		= darker (@bg_color)
-	fg[ACTIVE]		= @fg_color
+	fg[NORMAL]		= @text_color		# Metacity and mouseover, Most text
+	fg[PRELIGHT]		= @fg_color		# Text when mouseover
+	fg[ACTIVE]		= @fg_color		# Text when mouseclicking button, Tabs, Active window list
+	fg[SELECTED]		= @selected_fg_color		# Metacity X when window selected
+	fg[INSENSITIVE]		= darker (@bg_color)	# Insensitive Text
 
-	text[NORMAL]		= @text_color
-	text[PRELIGHT]		= @text_color
-	text[SELECTED]		= @selected_fg_color
-	text[INSENSITIVE]	= darker (@bg_color)
-	text[ACTIVE]		= @selected_fg_color
+	base[NORMAL]		= @base_color	# Background, most
+	base[PRELIGHT]		= shade (0.95, @bg_color)	# Mouseover menu
+	base[ACTIVE]		= shade (0.9, @selected_bg_color)	# Menu active item in inactive window
+	base[SELECTED]		= @selected_bg_color	# Menu active item in active window
+	base[INSENSITIVE]	= @bg_color	# Background, insensitive
 
-	base[NORMAL]		= @base_color
-	base[PRELIGHT]		= shade (0.95, @bg_color)
-	base[SELECTED]		= @selected_bg_color
-	base[INSENSITIVE]	= @bg_color
-	base[ACTIVE]		= shade (0.9, @selected_bg_color)
+	text[NORMAL]		= @text_color	# Text in window
+	text[PRELIGHT]		= @text_color	# Text on Mouseover
+	text[ACTIVE]		= @selected_fg_color	# Active text in inactive window ?
+	text[SELECTED]		= @selected_fg_color	 # Active text in active window
+	text[INSENSITIVE]	= darker (@bg_color)	 # Unknown
+
 
 	# For succinctness, all reasonable pixmap options remain here
 
