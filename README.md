@@ -2,7 +2,7 @@
 
 GTK theme based on B00merang-Project Windows 8.1 theme that based on the Windows 8.1 appearance.
 
-Modified for my taste. Cinnamon (Linux Mint? Ubuntu?) only.
+Modified for my taste. For right angles lovers. Cinnamon (Linux Mint? Ubuntu?) only.
 
 Project in development. This is Beta version.
 

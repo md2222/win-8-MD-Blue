@@ -52,8 +52,8 @@ error  e61b23  ed1c24
     color: mix(#000000, #F0F0F0, 0.5);
     background-color: mix(#000000, #F0F0F0, 0.95); }
   .gtkstyle-fallback:selected {
-    color: #202020;
-    background-color: #c5e5fa; }
+    color: #ffffff;
+    background-color: #308cc6; }
 
 image, image:disabled, label, label:disabled, box, box:disabled {
   background-color: transparent; }
@@ -429,7 +429,9 @@ treeview.view check:backdrop, treeview.view radio:backdrop {
     background-color: #e2eff7; 
 	}
   .content-view.view:selected, .content-view.view:active {
-    background-color: #c5e5fa; }
+	color: #ffffff;
+    background-color: #308cc6; 
+  }
   .content-view.view:disabled {
     background-color: shade(#FFFFFF, 0.9); }
 
@@ -1605,6 +1607,7 @@ statusbar {
   statusbar frame > border {
     border: none; }
 
+
 switch {
   font-size: 0;
   color: transparent;
@@ -1612,7 +1615,8 @@ switch {
   margin: 4px;
   border: none;
   border-radius: 0px;
-  background-color: shade(#F0F0F0, 0.9); }
+  background-color: shade(#F0F0F0, 0.8); 
+}
   switch:checked {
     background-color: shade(#c5e5fa, 0.7); }
     switch:checked:backdrop {
@@ -1624,20 +1628,23 @@ switch {
   switch:backdrop {
     background-color: shade(#F0F0F0, 0.9); }
   switch slider {
-    min-width: 20px;
-    min-height: 16px;
-    margin: 0;
+    min-width: 10px;
+    min-height: 14px;
+    margin: 1px;
     border: 1px solid shade(shade(#F0F0F0, 0.9), 0.8);
     border-radius: 0px;
     color: #202020;
     background-color: #FFFFFF;
-    background-image: linear-gradient(to bottom, #F0F0F0, shade(#F0F0F0, 0.95)); }
+    /*background-image: linear-gradient(to bottom, #F0F0F0, shade(#F0F0F0, 0.95)); */
+	background-color: #F0F0F0;
+  }
   switch:disabled slider {
     background-color: shade(mix(#000000, #F0F0F0, 0.95), 1.05); }
   switch:disabled:backdrop slider {
     background-color: mix(#000000, #F0F0F0, 0.98); }
   switch:backdrop slider {
     background-color: #FFFFFF; }
+
 
 colorswatch.top {
   border-top-left-radius: 2.5px;
@@ -2263,25 +2270,25 @@ treeview {
     color: mix(#000000, #F0F0F0, 0.5);
     background-color: mix(#000000, #F0F0F0, 0.95); }
   .view:selected, .view:selected:focus, .view text:selected, .view text:selected:focus {
-    color: #202020;
-    background-color: #c5e5fa;
+    color: #ffffff;
+    background-color: #308cc6;
     border-radius: 0px;
     -gtk-outline-radius: 0px; }
     .view:selected:disabled, .view:selected:focus:disabled, .view text:selected:disabled, .view text:selected:focus:disabled {
-      color: mix(#000000, mix(#000000, #F0F0F0, 0.5), 0.5);
-      background-color: #c5e5fa; }
+      color: #f0f0f0;
+      background-color: #666666; }
     .view:selected:backdrop, .view:selected:focus:backdrop, .view text:selected:backdrop, .view text:selected:focus:backdrop {
-      color: #202020;
-      background-color: #c5e5fa; }
+      color: #ffffff;
+      background-color: #666666; }
   .view text selection, .view text selection:focus {
     color: #FFFFFF;
     background-color: #308cc6; }
     .view text selection:disabled, .view text selection:focus:disabled {
-      color: mix(#000000, mix(#000000, #F0F0F0, 0.5), 0.5);
-      background-color: #c5e5fa; }
+      color: #f0f0f0;
+      background-color: #666666; }
     .view text selection:backdrop, .view text selection:focus:backdrop {
-      color: #202020;
-      background-color: #c5e5fa; }
+      color: #ffffff;
+      background-color: #666666; }
 
 filechooser.csd.background, filechooser placessidebar list, .nautilus-window.csd.background, .nautilus-window placessidebar list, .nemo-window.csd.background, .nemo-window placessidebar list {
   background-color: #F0F0F0; 
@@ -3096,7 +3103,7 @@ UnityPanelWidget, .unity-panel {
 /* base background color of selections */
 @define-color theme_selected_bg_color #c5e5fa;
 /* text/foreground color of selections */
-@define-color theme_selected_fg_color #000000;
+@define-color theme_selected_fg_color #202020;
 /* base background color of insensitive widgets */
 @define-color insensitive_bg_color mix(#000000, #F0F0F0, 0.95);
 /* text foreground color of insensitive widgets */
