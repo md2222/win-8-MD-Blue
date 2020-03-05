@@ -289,9 +289,13 @@ checkbutton, radiobutton {
   outline-offset: 0; }
 
 check, radio {
-  margin: 4px;
-  min-height: 13px;
-  min-width: 13px; }
+  margin: 0;
+  min-height: 16px;
+  min-width: 16px; }
+menuitem check, menuitem radio {
+  margin: 0 3px 0 1px;
+}
+
 
 .check, check {
   -gtk-icon-source: -gtk-scaled(url("assets/checkbox-unchecked.png"), url("assets/checkbox-unchecked-@2.png"));
@@ -900,13 +904,16 @@ menu menuitem, .menu menuitem {
     menu menuitem arrow:dir(rtl), .menu menuitem arrow:dir(rtl) {
       margin-right: 10px;
       -gtk-icon-source: -gtk-icontheme("pan-end-symbolic-rtl"); }
-
 menuitem accelerator {
   color: alpha(currentColor, 0.55); }
   menuitem accelerator:hover {
     color: alpha(#000000, 0.8); }
   menuitem accelerator:disabled {
     color: mix(#000000, #F0F0F0, 0.5); }
+    menuitem check, menuitem radio {
+      min-height: 16px;
+      min-width: 16px; 
+	}
 
 popover, popover.background {
   padding: 2px;
