@@ -713,19 +713,23 @@ StScrollBar StButton#vhandle:hover {
  * Notifications (messageTray.js)
  * ===================================================================*/
 #notification {
-    font-size: 8.5pt;
+    font-size: 9pt;
     /*border-radius: 10px 10px 10px 10px;*/
     border-radius: 0px;
-    border: 2px solid rgba(214, 214, 214, 0.5);
+    /*border: 4px solid rgba(200, 200, 200, 0.5);*/
+	border: none;
     background-gradient-direction: vertical;
-    background-gradient-start: rgba(66, 66, 66, 0.9);
-    background-gradient-end: rgba(55, 55, 55, 0.9);
-    padding: 8px 8px 8px 8px;
+    /*background-gradient-start: rgba(80, 80, 80, 0.9);
+    background-gradient-end: rgba(80, 80, 80, 0.9);*/
+    background-gradient-start: #505050;
+    background-gradient-end: #505050;
+    padding: 10px;
     spacing-rows: 10px;
     spacing-columns: 10px;
     margin-from-right-edge-of-screen: 20px;
     width: 34em;
     color: white;
+	/*box-shadow: 0 3px 5px 1px alpha(#505050, 0.5);*/
 }
 
 /* For the links inside notifications. These URLs are already underlined with Pango markup. */
@@ -773,7 +777,7 @@ StScrollBar StButton#vhandle:hover {
 }
 
 .notification-button {
-    border-radius: 5px;
+    border-radius: 0px;
     padding: 4px 8px 5px;
 }
 
@@ -782,7 +786,7 @@ StScrollBar StButton#vhandle:hover {
 }
 
 .notification-icon-button {
-    border-radius: 5px;
+    border-radius: 0px;
     padding: 5px;
 }
 
@@ -996,7 +1000,8 @@ StScrollBar StButton#vhandle:hover {
 
 .osd-window .level {
     height: 0.7em;
-    border-radius: 0.3em;
+    /*border-radius: 0.3em;*/
+    border-radius: 0;
     background-color: rgba(190, 190, 190, 0.2);
 }
 
@@ -1458,7 +1463,7 @@ StScrollBar StButton#vhandle:hover {
 .window-list-item-box:focus {
     background-gradient-direction: vertical;
     background-gradient-start: #4c7996;
-    background-gradient-end: #3f647d;
+    background-gradient-end: #4c7996;
     box-shadow: inset 0px 0px 0px 1px rgba(100, 100, 100, 0.5);
 }
 
