@@ -1016,7 +1016,8 @@ notebook {
     notebook tab:checked {
       border-color: shade(#F0F0F0, 0.9);
       background-color: #FFFFFF;
-      background-image: none; }
+      background-image: none; 
+	}
       notebook tab:checked:hover {
         background-color: #FFFFFF; }
       notebook tab:checked:backdrop {
@@ -1033,27 +1034,34 @@ notebook {
     notebook > header:backdrop {
       background-color: #F0F0F0; }
     notebook > header.top {
-      box-shadow: 0 1px shade(#F0F0F0, 0.9); }
+      box-shadow: 0 1px shade(#F0F0F0, 0.9); 
+	}
+
      notebook > header.top > tabs > tab {
         border-bottom: none;
-        margin-top: 2px; 
+        margin-top: 2px;  /* offset relative to checked */
 	 }
         notebook > header.top > tabs > tab:checked {
           border-top-left-radius: 0px;
           border-top-right-radius: 0px;
           margin-top: 0;
-          margin-bottom: -1px; }
+          margin-bottom: -1px;
+		  padding-bottom: 6px;   /* when one tab ... 3px (default) + 2 (offset) + 1 (this argin) */
+	}
+
     notebook > header.bottom {
       padding-top: 0;
       box-shadow: 0 -1px shade(#F0F0F0, 0.9); }
       notebook > header.bottom > tabs > tab {
         border-top: none;
-        margin-bottom: 2px; }
+        margin-bottom: 2px; 
+	}
         notebook > header.bottom > tabs > tab:checked {
           border-bottom-left-radius: 0px;
           border-bottom-right-radius: 0px;
           margin-bottom: 0;
-          margin-top: -1px; }
+          margin-top: -1px; 
+		}
     notebook > header.right {
       box-shadow: -1px 0 shade(#F0F0F0, 0.9); }
       notebook > header.right > tabs > tab {
