@@ -1046,7 +1046,7 @@ notebook {
           border-top-right-radius: 0px;
           margin-top: 0;
           margin-bottom: -1px;
-		  padding-bottom: 6px;   /* when one tab ... 3px (default) + 2 (offset) + 1 (this argin) */
+		  padding-bottom: 6px;   /* when one tab ... 3px (default) + 2 (offset) + 1 (this margin) */
 	}
 
     notebook > header.bottom {
@@ -1651,8 +1651,8 @@ switch {
   switch:backdrop {
     background-color: shade(#F0F0F0, 0.9); }
   switch slider {
-    min-width: 10px;
-    min-height: 14px;
+    min-width: 8px;
+    min-height: 12px;
     margin: 1px;
     border: 1px solid shade(shade(#F0F0F0, 0.9), 0.8);
     border-radius: 0px;
@@ -1660,6 +1660,9 @@ switch {
     background-color: #FFFFFF;
     /*background-image: linear-gradient(to bottom, #F0F0F0, shade(#F0F0F0, 0.95)); */
 	background-color: #F0F0F0;
+  }
+  switch:checked slider {
+    border: 1px solid shade(#c5e5fa, 0.55);
   }
   switch:disabled slider {
     background-color: shade(mix(#000000, #F0F0F0, 0.95), 1.05); }
